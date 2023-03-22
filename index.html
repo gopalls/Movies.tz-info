@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Video Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Flexbox layout */
+      .videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      /* Video styling */
+      .video {
+        width: 30%;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .video img {
+        max-width: 100%;
+      }
+      
+      .video h2 {
+        margin-top: 10px;
+      }
+      
+      /* Centered heading */
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 48px;
+        color: #333;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+      }
+      
+      /* Colored background for videos */
+      .video:nth-child(odd) {
+        background-color: #f7a7a7;
+      }
+      
+      .video:nth-child(even) {
+        background-color: #a7d7f7;
+      }
+      
+      /* Media queries for responsive design */
+      @media only screen and (max-width: 768px) {
+        .video {
+          width: 45%;
+        }
+      }
+      
+      @media only screen and (max-width: 480px) {
+        .videos {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .video {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to <span style="color:#f7a7a7">My</span> <span style="color:#a7d7f7">Video</span> Site</h1>
+    <div class="videos">
+      <div class="video">
+        <a href="#">
+          <img src="dummy_thumbnail.jpg" alt="Dummy Thumbnail">
+          <h2>Video Title</h2>
+        </a>
+      </div>
+      <div class="video">
+        <a href="#">
+          <img src="dummy_thumbnail.jpg" alt="Dummy Thumbnail">
+          <h2>Video Title</h2>
+        </a>
+      </div>
+      <div class="video">
+        <a href="#">
+          <img src="dummy_thumbnail.jpg" alt="Dummy Thumbnail">
+          <h2>Video Title</h2>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
